@@ -1,25 +1,30 @@
 <div class="container mt-5 mb-5 text-bg-secondary">
-  <form>
-    <div class="mb-3">
+  <h3 class="mb-2 text-center">Log-In</h3>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <div class="mb-3 form-group">
       <label for="username" class="form-label">Username</label>
       <input
         type="text"
         id="username"
         name="username"
         class="form-control"
+        ngModel
         required
       />
     </div>
-    <div class="mb-3">
+    <div class="mb-3 form-group">
       <label for="password" class="form-label">Password</label>
       <input
         type="password"
         id="password"
         name="password"
         class="form-control"
+        ngModel
         required
       />
     </div>
-    <button type="submit" class="btn btn-primary">Log In</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">
+      Log In
+    </button>
   </form>
 </div>
