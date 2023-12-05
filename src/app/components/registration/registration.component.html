@@ -1,0 +1,65 @@
+<div class="container mt-5 mb-5 text-bg-secondary">
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        formControlName="name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="surname" class="form-label">Cognome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="surname"
+        formControlName="surname"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="confirm-password" class="form-label">Conferma Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="confirm-password"
+        formControlName="confirmPassword"
+      />
+    </div>
+    <div class="mb-3 d-flex flex-column">
+      <label for="gender">Genere</label>
+      <select id="gender" formControlName="gender">
+        <option value="male">Uomo</option>
+        <option value="female">Donna</option>
+      </select>
+    </div>
+    <div class="mb-3 d-flex flex-column">
+      <label for="profile-image">Immagine Profilo</label>
+      <input type="file" id="profile-image" formControlName="profileImage" />
+    </div>
+    <div class="mb-3 d-flex flex-column">
+      <label for="bio">Biografia</label>
+      <textarea id="bio" formControlName="bio"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        formControlName="username"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+</div>
